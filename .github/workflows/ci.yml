@@ -1,15 +1,9 @@
+
 name: CI
 
 on:
-  push:
-    branches: [main, develop]
-    paths-ignore:
-      - 'docs/**'
-  pull_request:
-    branches: [main, develop]
-    paths-ignore:
-      - 'docs/**'
-
+  workflow_dispatch:
+  # Automatic triggers removed; invoke through FounderOS/Admin Gate.
 concurrency:
   group: ci-${{ github.ref }}
   cancel-in-progress: true
